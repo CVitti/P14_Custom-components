@@ -19,25 +19,27 @@
     min-width: 250px;
     row-gap: 15px;
     position: relative;
+    border: solid 2px #146EBE;
 }
 
 .closeIcon{
     position: absolute;
     top: -16px;
     right: -16px;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     border-radius: 16px;
+    border-color: #146EBE;
+    border-style: solid;
 }
 
 .closeBtn{
     align-self: center;
     width: fit-content;
     margin-top: 10px;
-}
-
-.modalContent p{
-    margin: 0;
-    display: flex;
-    column-gap: 10px;
-    align-items: center;
+    padding: 5px;
+    background-color: #146EBE;
+    border-color: transparent;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #FFFFFF;
 }
