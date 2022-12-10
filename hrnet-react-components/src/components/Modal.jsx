@@ -23,8 +23,7 @@ Modal.propTypes = {
         PropTypes.node
     ]).isRequired,
     isOpen: PropTypes.bool.isRequired,
-    modalClose: PropTypes.func.isRequired,
-    color: PropTypes.string.isRequired
+    modalClose: PropTypes.func.isRequired
 }
 
 /**

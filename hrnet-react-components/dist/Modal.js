@@ -27,8 +27,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 Modal.propTypes = {
   children: _propTypes.default.oneOfType([_propTypes.default.arrayOf(_propTypes.default.node), _propTypes.default.node]).isRequired,
   isOpen: _propTypes.default.bool.isRequired,
-  modalClose: _propTypes.default.func.isRequired,
-  color: _propTypes.default.string.isRequired
+  modalClose: _propTypes.default.func.isRequired
 };
 
 /**
