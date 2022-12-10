@@ -31,6 +31,7 @@ function App() {
       <Modal
         isOpen={isModalOpen}
         modalClose={manageModalState}
+        color="#146EBE"
       >
         <ul className="createModalList">
           <li className="createModalTitle createModalItem">
