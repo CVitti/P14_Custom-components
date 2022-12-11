@@ -32,3 +32,16 @@
     border-style: solid;
     cursor: pointer;
 }
+
+.closeBtn{
+    background-color: #146EBE;
+    border-radius: 5px;
+    border-color: #146EBE;
+    border-style: solid;
+    cursor: pointer;
+    color: #FFFFFF;
+    width: fit-content;
+    padding: 5px 10px;
+    font-weight: 600;
+    align-self: center;
+}

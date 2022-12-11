@@ -10,10 +10,6 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 // React import
 import React from "react";
 
-// MUI Button import
-import Button from '@mui/material/Button';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-
 // Proptypes import
 import PropTypes from 'prop-types';
 
@@ -36,17 +32,6 @@ Modal.propTypes = {
  */
 export default function Modal({children, isOpen, modalClose}){
 
-    const btnTheme = createTheme({
-        palette: {
-          primary: {
-            main: "#146EBE",
-          },
-        },
-        typography: {
-            fontFamily: 'Montserrat',
-        },
-    });
-
     if (isOpen) {
         return (
             <div className='modalBg' id="modalBg" role="dialog" aria-modal="true">
@@ -55,11 +40,9 @@ export default function Modal({children, isOpen, modalClose}){
                         <FontAwesomeIcon icon={faXmark} size="2x" color="#146EBE"/>
                     </button>
                     {children}
-                    <ThemeProvider theme={btnTheme}>
-                        <Button variant="contained" onClick={modalClose} sx={{width:"fit-content", alignSelf:"center"}}>
-                            Close this window
-                        </Button>
-                    </ThemeProvider>            
+                    <button className="closeBtn" onClick={modalClose}>
+                        Close this window
+                    </button>           
                 </section>
             </div>
         );

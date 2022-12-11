@@ -8,8 +8,6 @@ require("./Modal.css");
 var _reactFontawesome = require("@fortawesome/react-fontawesome");
 var _freeSolidSvgIcons = require("@fortawesome/free-solid-svg-icons");
 var _react = _interopRequireDefault(require("react"));
-var _Button = _interopRequireDefault(require("@mui/material/Button"));
-var _styles = require("@mui/material/styles");
 var _propTypes = _interopRequireDefault(require("prop-types"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 // @ts-nocheck
@@ -19,8 +17,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // FontAwesome Icons import
 
 // React import
-
-// MUI Button import
 
 // Proptypes import
 
@@ -42,16 +38,6 @@ function Modal(_ref) {
   var children = _ref.children,
     isOpen = _ref.isOpen,
     modalClose = _ref.modalClose;
-  var btnTheme = (0, _styles.createTheme)({
-    palette: {
-      primary: {
-        main: "#146EBE"
-      }
-    },
-    typography: {
-      fontFamily: 'Montserrat'
-    }
-  });
   if (isOpen) {
     return /*#__PURE__*/_react.default.createElement("div", {
       className: "modalBg",
@@ -68,16 +54,10 @@ function Modal(_ref) {
       icon: _freeSolidSvgIcons.faXmark,
       size: "2x",
       color: "#146EBE"
-    })), children, /*#__PURE__*/_react.default.createElement(_styles.ThemeProvider, {
-      theme: btnTheme
-    }, /*#__PURE__*/_react.default.createElement(_Button.default, {
-      variant: "contained",
-      onClick: modalClose,
-      sx: {
-        width: "fit-content",
-        alignSelf: "center"
-      }
-    }, "Close this window"))));
+    })), children, /*#__PURE__*/_react.default.createElement("button", {
+      className: "closeBtn",
+      onClick: modalClose
+    }, "Close this window")));
   } else {
     return null;
   }
